@@ -1,0 +1,68 @@
+header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: gray;
+}
+
+#header {
+  height: 50px;
+  background-color: red;
+}
+
+#slider {
+  width: 800px;
+  height: 450px;
+
+  margin: 0 auto;
+  overflow: hidden; /* esconde itens */
+}
+
+.slider--width {
+  /* width: 9999; Será calculado em JavaScript*/
+  height: 100%;
+  display: flex;  /* deixa as imagens uma ao lado da outra */
+  transition: all ease 0.3s;
+}
+
+.slider--controls {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider--control {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 5px 13px;
+  font-size: 40px;
+
+}
+
+.slider--item {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+
+.slider--item:nth-of-type(1) {
+  background-image: url(../images/1.jpg);
+}
+
+.slider--item:nth-of-type(2) {
+  background-image: url(../images/2.jpg);
+}
+
+.slider--item:nth-of-type(3) {
+  background-image: url(../images/3.jpg);
+}

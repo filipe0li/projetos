@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;/*remove marca dos botões*/
+    font-family: comic sans MS;
+    font-size: 22px;
+}
+body {
+    background-color: #41002d;
+    color: white;
+}
+.principal {
+    margin: 0 auto;
+    margin-top: 120px;
+    width: 680px;
+    height: 315px;
+}
+#calculadora {
+    float: left;
+}
+.historico {
+    vertical-align: top;
+    margin-top: 50px;
+    float: right;
+}
+table {
+    width: 200px;
+    height: 150px;
+}
+th {
+    width: max-content;
+    font-size: 18px;
+    font-weight: normal;
+}
+td {
+    width: 190px;
+    margin: 2px;
+    display: block;
+    border: 1px solid gray;
+    font-size: 13px;
+    overflow: hidden;/*esconde números q passam do comprimento*/
+    text-overflow: ellipsis;/*add ... ao final da linha*/
+    white-space: nowrap;/*limita altura da linha*/
+}
+#controles {
+    text-align: center;
+    width: inherit
+}
+#numeracao{
+    font-size: 18px;
+}
+input {
+    margin: 2px;
+    border: none;
+    border-radius: 3px;/*add borda*/
+}
+input[type=button] {
+    width: 100px;
+    height: 50px;
+    margin: 2px;
+    transition: ease 0.2s;
+    cursor: pointer;
+}
+input[type=text] {
+    width: calc(100% - 4px);
+    height: 40px;
+}
+#calculadora div {
+    display: flex;
+    box-shadow: 0 0 20px black;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+input[value="C"] {
+    background-color: #f11a1a;
+}
+input[value="+/-"] {
+    border-bottom-left-radius: 35px;
+}
+input[value="="] {
+    background-color: #1a4cf1;
+    border-bottom-right-radius: 35px;
+}
+input[value="+"], input[value="-"], input[value="*"], input[value="/"], input[value="⌫"] {
+    background-color: #b4b4b4;
+}
+input[type=button]:hover {
+    filter: brightness(50%);
+}
+input[type=button]:active {
+    transform: scale(0.9);
+}

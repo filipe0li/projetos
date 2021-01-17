@@ -1,0 +1,24 @@
+table { 
+    border-spacing: 0px;
+    border-collapse: separate;
+    width: 100%;
+    border-bottom: 1px solid #aaa;
+    text-align: center;
+}
+
+thead td {
+    margin: 0;
+    padding: 0;
+    padding: 2px;
+}
+
+thead th {
+    margin: 0;
+    padding: 5px;
+    border-bottom: 1px solid #aaa;
+}
+
+div {
+    padding-top: 10px;
+    text-align: center;
+}

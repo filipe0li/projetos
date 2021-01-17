@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.btnMenu {
+    display: block; /* original do A é line, mas foi trocado pra block, para q vire um bloco dando para configurar como se fosse uma caixa */
+    box-sizing: border-box; /* diz que o tamanho do cubo é até a borda, original não conta padding nem border*/
+    padding: 5px;
+    width: 40px;    /* 30 da fonte + (5 + 5) do padding == 40px */
+    height: 40px;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
+
+.menu {
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    top: 40px;  /* 40 do btnMenu */
+    left: 0px;
+    width: 120px;
+    transition: 200ms linear;
+}
+
+.menu_close {
+    left: -120px;
+}
+
+.menu-item {
+    box-sizing: border-box;
+    padding: 15px;
+    border-bottom: 1px solid rgba(116, 124, 129, 0.8);
+    list-style: none;
+}
+
+.menu-item-action {
+    color: #747c81;
+    font-size: 12px;
+    text-decoration: none;
+}

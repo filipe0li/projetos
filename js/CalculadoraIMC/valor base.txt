@@ -1,0 +1,8 @@
+peso / (altura * altura)
+
+<18.5 'abaixo do peso'
+<25 'com peso ideal, Parabens'
+<30 'levemente acima do peso'
+<35 'obesidade grau 1'
+<40 'obesidade grau 2'
+'obesidade grau 3, Cuidado!'
