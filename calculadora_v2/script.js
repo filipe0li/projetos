@@ -11,7 +11,7 @@ const atualiza = () => {
   let [parteInteira, parteDecimal] = sValor.split(',');
   let v = '';
   c = 0;
-  for (let i = parteInteira.length - 1; i >= 0 ; i--) {
+  for (let i = parteInteira.length - 1; i >= 0; i--) {
     if (++c > 3) {
       v = '.' + v;
       c = 1;
@@ -35,10 +35,10 @@ const digito = (n) => {
 // ADICINA VIRGULA NA TELA
 const virgula = (n) => {
   if (novoNumero && n == ",") {
-  sValor = '0,'
-} else if (n == "," && !sValor.includes(',')) { // NÃO PODE CONTER VIRGULA NA TELA
+    sValor = '0,'
+  } else if (n == "," && !sValor.includes(',')) { // NÃO PODE CONTER VIRGULA NA TELA
     sValor += n;
-}
+  }
   novoNumero = false;
   atualiza();
 }
@@ -68,7 +68,7 @@ const valorAtual = () => {
 }
 
 // TRATAMENTO
-const operador = (op) =>{
+const operador = (op) => {
   calcula();
   valorAnterior = valorAtual();
   operacaoPendente = op;
@@ -79,14 +79,14 @@ const calcula = () => {
   if (operacaoPendente != null) {
     let resultado;
     switch (operacaoPendente) {
-      case '+' : resultado = valorAnterior + valorAtual();
-      break;
-      case '-' : resultado = valorAnterior - valorAtual();
-      break;
+      case '+': resultado = valorAnterior + valorAtual();
+        break;
+      case '-': resultado = valorAnterior - valorAtual();
+        break;
       case '*': resultado = valorAnterior * valorAtual();
-      break;
+        break;
       case '/': resultado = valorAnterior / valorAtual();
-      break;
+        break;
     }
     sValor = resultado.toString().replace('.', ',');
   }
