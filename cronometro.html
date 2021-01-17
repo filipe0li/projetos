@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronometro</title>
+</head>
+
+<body>
+  <select name="hh" id="hh">
+
+  </select>
+  <select name="mm" id="mm">
+
+  </select>
+  <select name="ss" id="ss">
+
+  </select><br>
+
+  <input type="button" value="Start" id="startUp" onclick="start(timerUp)">
+  <input type="button" value="Start" id="startUp" onclick="start(timerDw)">
+  <input type="button" value="Pause" id="sause" onclick="pause()">
+  <input type="button" value="Stop" id="stop" onclick="stop()">
+
+  <script>
+    const hh = document.querySelector('#hh');
+    const mm = document.querySelector('#mm');
+    const ss = document.querySelector('#ss');
+
+    function criaOption(n, t1, t2) {
+      for (i = t1; i <= t2; i++) {
+        const option = document.createElement('option');
+        var text = document.createTextNode(i);
+        option.appendChild(text);
+        option.setAttribute('value', i);
+        n.appendChild(option);
+      }
+    };
+
+    criaOption(hh, 0, 24);
+    criaOption(mm, 0, 60);
+    criaOption(ss, 0, 60);
+
+    //==============================================================//
+    const tempo = 1000//tempo
+    let cron;
+
+    function start(fn) {
+      cron = setInterval(fn, tempo)
+    };
+
+    function pause() {
+      clearInterval(cron);
+    };
+
+    function stop() {
+      pause();
+      hh.value = 0;
+      mm.value = 0;
+      ss.value = 0;
+    };
+
+    function timerUp() {
+      ss.value++;
+      if (ss.value == 60) {
+        ss.value = 0;
+        mm.value++
+        if (mm.value == 60) {
+          mm.value = 0
+          hh.value++
+        }
+      }
+    };
+
+    function timerDw() {
+      if (ss.value > 0) {
+      ss.value--;
+    }
+      else if (ss.value == 0 && mm.value > 0) {
+      ss.value = 59;
+      mm.value--;
+    }
+      else if (mm.value == 0 && hh.value > 0) {
+      mm.value = 59;
+      hh.value--;
+    } else {
+      pause();
+      alert('fim');
+    }
+  };
+
+  </script>
+</body>
+
+</html>

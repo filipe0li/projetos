@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validador de formulário</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script><!-- defer ==> faz com que demore a ser carregado -->
+</head>
+
+<body>
+  <form action="">
+
+    <h2>Entrar na lista</h2>
+
+    <div class="input">
+      <input type="text" id="iNome" required>
+      <label for="iNome">Nome</label>
+      <span class="error"></span>
+    </div>
+
+    <!-- input -->
+    <div class="input">
+      <input type="email" id="iEmail" required>
+      <label for="iEmail">E-Mail</label>
+      <span class="error"></span>
+    </div>
+    <!-- input -->
+
+    <button type="submit">Enviar</button>
+
+  </form>
+</body>
+
+</html>
